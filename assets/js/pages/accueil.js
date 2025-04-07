@@ -1,7 +1,7 @@
 import  navigationInit, {formaterTexte} from "../components/navigation.js"
 // === Variables globales ===
 const nombreDeProduitsAfficher = 9;  // le nombre de produits à afficher dans la liste
-const chemin = ["./assets", "img", "produits"]; // Chemin de base pour les images des produits
+const chemin = ["assets", "img", "produits"]; // Chemin de base pour les images des produits
 const produits = [
     {   
         id: 1, 
