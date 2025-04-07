@@ -8,6 +8,7 @@ const nav = document.querySelector("nav");
 
 function init(){
     genererNavigation()   
+    formaterTexte(texte);
 }
 /**
  * Fonction pour formater le texte d'un lien

@@ -42,7 +42,7 @@ Les séances de cours et le centre d'aide.
 
 
 le lien du projet sur Github Pages:
-https://Loubna-Souiba.github.io//index.html
+https://loubna-souiba.github.io/fleur-de-bonheur/
 
 
 P.S. : J’ai également apporté les modifications demandées pour le deuxième TP.
