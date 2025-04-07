@@ -1,7 +1,7 @@
 import  navigationInit, {formaterTexte} from "../components/navigation.js"
 // === Variables globales ===
 const nombreDeProduitsAfficher = 9;  // le nombre de produits à afficher dans la liste
-const chemin = ["assets", "img", "produits"]; // Chemin de base pour les images des produits
+const chemin = ["./assets", "img", "produits"]; // Chemin de base pour les images des produits
 const produits = [
     {   
         id: 1, 
@@ -83,7 +83,7 @@ function obtenirCheminImage(nomImageProduit) {
  * @param {number} prix - Le prix du produit.
  * @param {string} description - La description du produit.
  * @param {string} image - Le chemin de l'image du produit.
- * @param {boolean} meilleurVente - Indicateur si le produit est un best-seller.
+ * @param {boolean} meilleurVente - Indicateur si le produit est une meilleur-vente.
  * @returns {Object} - L'objet représentant le produit créé.
  */
 function creerProduit(nom, prix, description, image, meilleurVente) {
