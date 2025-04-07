@@ -72,7 +72,7 @@ function init() {
  */
 function obtenirCheminImage(nomImageProduit) {
     nomImageProduit = formaterTexte(nomImageProduit).replaceAll(" ", "_");  // (Appel de la fonction formaterTexteLien() définie dans navigation.js)
-    let srcImgComplet = `${chemin.join("/")}/${nomImageProduit}.jpg`;
+    let srcImgComplet = `/fleur-de-bonheur/${chemin.join("/")}/${nomImageProduit}.jpg`;
     return srcImgComplet;
 }
 
