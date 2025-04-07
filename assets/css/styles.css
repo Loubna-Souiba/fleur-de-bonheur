@@ -1,0 +1,25 @@
+@import url("base/base.css");
+
+@import url("components/nav.css");
+@import url("components/bouton.css");
+@import url("components/progressBar.css");
+@import url("components/carrousel.css");
+@import url("components/modeNuit.css");
+@import url("components/boiteModale.css");
+@import url("components/defilement.css");
+
+@import url("pages/accueil.css");
+@import url("pages/formulaire.css");
+
+@import url("base/exceptions.css");
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "DancingScript";
+  src: url("../fonts/DancingScript-Regular.ttf");
+}
+
+

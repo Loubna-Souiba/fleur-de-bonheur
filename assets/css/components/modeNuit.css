@@ -1,0 +1,87 @@
+[data-theme="nuit"] {
+    --couleur-fond: #000;
+    --couleur-ecriture: #fff;
+    --couleur-style: #8d0334;
+}
+  
+[data-theme="nuit"] body,
+[data-theme="nuit"] header,
+[data-theme="nuit"] main {
+    background-color: var(--couleur-fond);
+    background-image: none;
+}
+  
+[data-theme="nuit"] nav, [data-theme="nuit"] {
+    background-color: var(--couleur-primaire);
+}
+  
+[data-theme="nuit"] .carrousel-titre {
+    color: var(--couleur-ecriture);
+}
+ 
+[data-theme="nuit"] .carrousel-precedent,
+[data-theme="nuit"] .carrousel-suivant {
+    background-color: var(--couleur-style);
+    color: var(--couleur-ecriture);
+    border: 2px solid ;
+}
+  
+[data-theme="nuit"] [data-mode-option] svg {
+    fill: var(--couleur-ecriture);
+}
+  
+[data-theme="nuit"] a{
+    color: var(--couleur-texte);
+}
+
+[data-theme="nuit"] .defilement-container {
+    background-color: var(--couleur-fond);
+    color:var(--couleur-ecriture);
+}
+ 
+[data-theme="nuit"] footer {
+    background-color: var(--couleur-fond);
+    color: var(--couleur-ecriture);
+    border-top: 2px solid var(--couleur-primaire);
+}
+
+.theme-position {
+    position: relative;
+}
+  
+.theme-choisie {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+  
+[data-mode] {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+[data-mode-option] {
+    cursor: pointer;
+    padding: 8px;
+    transition: transform 0.2s ease;
+}
+  
+[data-mode-option]:hover {
+    transform: scale(1.1);
+}
+  
+[data-mode-option] svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--couleur-primaire);
+}
+
+
+
+
+
+
+  

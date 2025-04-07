@@ -1,0 +1,91 @@
+.bouton-tri {
+    background-color: var(--couleur-primaire);
+    color: var(--couleur-secondaire);
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.bouton-tri:hover {
+    background-color: #2980b9;
+    transform: scale(1.05); 
+}
+
+.bouton {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block; 
+    width: auto;
+    min-width: 120px;
+    margin: 0 10px; 
+}
+
+.bouton.inactif {
+    background: #ccc; 
+    color: var(--couleur-texte); 
+    pointer-events: none; 
+    opacity: 0.7; 
+}
+
+.bouton:not(.inactif) {
+    background: var(--couleur-primaire); 
+    color: var(--couleur-secondaire); 
+    border: 1px solid var(--couleur-texte);
+    pointer-events: auto; 
+    opacity: 1; 
+}
+
+/* Empêcher le chevauchement */
+.bouton.reculer {
+    display: inline-block;
+}
+
+.bouton.continuer {
+    display: inline-block;
+}
+
+.bouton:hover , .bouton-effacer:hover {
+    background: var(--couleur-secondaire); 
+    color: var(--couleur-primaire); 
+    border-color: var(--couleur-primaire); 
+    transform: scale(1.1); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.bouton-effacer {
+    background-color: #FFA500; 
+    padding: 10px 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.bouton-effacer:hover {
+  background-color: #ff1a1a; 
+  color: aliceblue;
+}
+
+.bouton-effacer {
+  margin-left: 0; 
+}
+
+.bouton-fermer {
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--couleur-primaire);
+    cursor: pointer;
+    
+}
+
+.bouton-fermer:hover {
+    color: var(--couleur-texte);
+    transform: scale(1.1);
+}

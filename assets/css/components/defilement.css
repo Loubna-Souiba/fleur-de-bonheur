@@ -1,0 +1,27 @@
+.defilement-container {
+    display: flex;
+    background-color: rgb(246, 231, 231);
+    border: 2px solid var(--couleur-primaire);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    gap: 20px;
+    align-items: center;
+    opacity: 0;
+}
+
+.defilement-container img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+@media (max-width: 920px){
+    .defilement-container h2 {
+        text-align: start;
+    }
+    .defilement-container img {
+        width: 200px;
+        height: auto;
+    }
+}

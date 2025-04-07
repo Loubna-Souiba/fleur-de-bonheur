@@ -1,0 +1,48 @@
+TP3 Fleur de Bonheur
+
+Fonctionnalités Implémentées
+Architecture Modulaire : Le code est divisé en modules (carrousel, mode sombre, boîte modale, animations de défilement) pour faciliter la maintenance et l’ajout de nouvelles fonctionnalités.
+
+Page aPropos : Module principal, responsable de l'initialisation des composants.
+
+Carrousel d'Images : Défilement automatique avec contrôle manuel et pause au survol de la souris.
+
+Mode Jour/Nuit : Permet de basculer entre les thèmes, avec persistance des préférences utilisateur.
+
+Boîte Modale : Apparition après 5 secondes pour s’abonner à l’infolettre, avec gestion de l’état via localStorage.
+
+Animations au Défilement : Les sections apparaissent au défilement, optimisées avec IntersectionObserver pour une meilleure performance.
+
+Choix de Design
+Architecture : Utilisation de modules JavaScript pour une séparation claire des responsabilités et une meilleure maintenabilité.
+
+Design Visuel : Palette de couleurs douces et animations discrètes, adaptées aux deux thèmes jour/nuit. Mise en page responsive.
+
+Difficultés et Solutions
+Carrousel : Résolution des conflits entre défilement automatique et manuel en mettant en pause le défilement pendant l’interaction.
+
+Mode Sombre : Utilisation de closest() pour déléguer les événements et gérer plusieurs boutons avec un seul écouteur.
+
+Animations au Défilement : Utilisation de fill: "forwards" pour maintenir l'état des éléments animés après leur apparition.
+
+Transitions CSS et JavaScript : Synchronisation des animations via l’API Web Animation pour une meilleure fluidité.
+
+Tests et Assurance Qualité
+Tests manuels, validation W3C et Wave, tests d'accessibilité ont été réalisés pour garantir la qualité du code.
+
+Conclusion
+Le projet a permis d'améliorer l’expérience utilisateur du site grâce à des animations et interactions dynamiques, tout en maintenant une architecture propre et modulable.
+
+Utilisation de la console : J’ai utilisé les outils de développement (F12) pour tester et déboguer le code, mais j’ai évité l’utilisation de console.log dans la version finale pour maintenir un code propre.
+
+
+Références 
+La chaine Youtube de Maxime Lacasse.
+Les séances de cours et le centre d'aide.
+
+
+le lien du projet sur Github Pages:
+https://Loubna-Souiba.github.io//index.html
+
+
+P.S. : J’ai également apporté les modifications demandées pour le deuxième TP.

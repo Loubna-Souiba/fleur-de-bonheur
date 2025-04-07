@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bienvenue sur le site Fleur de Bonheur, votre spécialiste des créations florales.">
+    <meta name="keywords" content="fleurs, bouquets, plantes, décoration">
+    <meta name="author" content="Fleur de Bonheur">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/pages/accueil.js" type="module"></script>
+    <title>Fleur de Bonheur</title>
+</head>
+<body>
+    <header>
+        <nav> <!-- Navigation générée dynamiquement --> </nav> 
+    </header>
+
+    <main>
+        <section class="banniere">
+            <h1 class="titre-banniere">Fleur de Bonheur - Votre expert en créations florales</h1>
+            <img src="assets/img/banniere1.jpg" alt="Bannière avec fleurs colorées">
+        </section>
+    
+        <div class="contenu">
+            <aside class="detailProduit">
+                <h2>Détails du Produit</h2>
+                <img id="detail-image" alt="Image du produit">
+                <p id="detail-description"></p>
+                <span id="detail-prix"></span>
+            </aside>
+            
+            <section class="produits">
+                <h2>Liste des fleurs</h2>
+                <div class="controles">
+                    <div class="bouton-tri" data-tri="nom">Trier par nom (A-Z)</div>
+                    <div class="bouton-tri" data-tri="prix-asc">Prix croissant</div>
+                    <div class="bouton-tri" data-tri="prix-desc">Prix décroissant</div>
+                    <div class="bouton-tri" data-tri="meilleurs-vendus">Meilleurs vendus</div>
+                </div>
+                <div class="listeProduits"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Fleur de Bonheur. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
+
+

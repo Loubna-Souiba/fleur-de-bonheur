@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Fleur de bonheur">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/pages/formulaire.js" type="module"></script>
+    <title>Formulaire de Commande - Fleur de Bonheur</title>
+</head>
+<body>
+    <header>
+        <nav></nav> <!-- Navigation générée dynamiquement -->
+    </header>
+    <main>
+        <form action="#" method="POST">
+            <header>
+                <h1>Commander des fleurs en ligne</h1>
+                <div class="progress-bar__container">
+                    <div class="progress-bar">
+                        <div class="progress-bar__fill"></div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- SECTION 1 : Infos client -->
+            <section data-page="1" class="form-section">
+                <h2>Informations sur le Client</h2>
+                <small>* Champs obligatoires</small>
+
+                <div class="input-group">
+                    <label for="prenom-client">Prénom <span class="champs-obligatoire">*</span></label>
+                    <input type="text" id="prenom-client" name="prenom-client" data-type="nom-prenom" maxlength="30" required>
+                    <p class="message-erreur invisible">Votre prénom doit contenir uniquement des lettres, espaces, apostrophes (') et traits d'union (-), et comporter au moins 2 caractères.</p>
+                </div>
+
+                <div class="input-group">
+                    <label for="nom-client">Nom de famille <span class="champs-obligatoire">*</span></label>
+                    <input type="text" id="nom-client" name="nom-client" data-type="nom-prenom" maxlength="30" required>
+                    <p class="message-erreur invisible">Votre nom doit contenir uniquement des lettres, espaces, apostrophes (') et traits d'union (-), et comporter au moins 2 caractères.</p>
+                </div>
+
+                <div class="input-group">
+                    <label for="telephone-client">Numéro de téléphone <span class="champs-obligatoire">*</span></label>
+                    <input type="tel" id="telephone-client" name="telephone-client" placeholder="(000) 000-0000" pattern="\(?\d{3}\)?\s?-?\d{3}-?\d{4}" required>
+                    <p class="message-erreur invisible">Numéro invalide, format attendu : (000) 000-0000</p>
+                </div>
+
+                <div class="input-group">
+                    <label for="email-client">Email <span class="champs-obligatoire">*</span></label>
+                    <input type="email" id="email-client" name="email-client" placeholder="exemple@exemple.com" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z]+\.[a-zA-Z]{2,}$" required>
+                    <p class="message-erreur invisible">Email invalide, format attendu : exemple@exemple.com </p>
+                </div>
+            </section>
+
+            <!-- SECTION 2 : Détails de livraison -->
+            <section data-page="2" class="form-section invisible">
+                <h2>Détails de Livraison</h2>
+                <small>* Champs obligatoires</small>
+
+                <div class="input-group">
+                    <label for="prenom-recepteur">Livrer à : (Prénom) <span class="champs-obligatoire">*</span></label>
+                    <input type="text" id="prenom-recepteur" name="prenom-recepteur" data-type="nom-prenom" maxlength="30" required>
+                    <p class="message-erreur invisible">Le prénom doit contenir uniquement des lettres, espaces, apostrophes (') et traits d'union (-), et comporter au moins 2 caractères.</p>
+                </div>
+
+                <div class="input-group">
+                    <label for="nom-recepteur">Livrer à : (Nom de famille) <span class="champs-obligatoire">*</span></label>
+                    <input type="text" id="nom-recepteur" name="nom-recepteur" maxlength="30" data-type="nom-prenom" required>
+                    <p class="message-erreur invisible">Le nom doit contenir uniquement des lettres, espaces, apostrophes (') et traits d'union (-), et comporter au moins 2 caractères.</p>
+                </div>
+          
+                <div class="input-group">
+                    <label for="telephone-recepteur">Numéro de Téléphone du Récepteur <span class="champs-obligatoire">*</span></label>
+                    <input type="tel" id="telephone-recepteur" name="telephone-recepteur" placeholder="(000) 000-0000" pattern="\(?\d{3}\)?\s?-?\d{3}-?\d{4}" required>
+                    <p class="message-erreur invisible">Numéro invalide, format attendu : (000) 000-0000</p>
+                </div>
+          
+                <div class="input-group">
+                    <label for="adresse-livraison">Adresse Postale de Livraison <span class="champs-obligatoire">*</span></label>
+                    <input type="text" id="adresse-livraison" name="adresse-livraison" maxlength="100" required>
+                </div>
+
+                <div class="input-group">
+                  <label for="nom-recepteur">Code postale <span class="champs-obligatoire">*</span></label>
+                  <input type="text" id="code-postale" name="code-postale" pattern ="^[A-Za-z]\d[A-Za-z]\s?\d[A-Za-z]\d$" required>
+                  <p class="message-erreur invisible">Code postale invalide, format attendu : (H1H Y37)</p>
+                </div>
+  
+                <div class="input-group">
+                    <label for="province">Province <span class="champs-obligatoire">*</span></label>
+                    <select id="province" name="province" required>
+                      <option value="">Sélectionnez une province</option>
+                      <option value="AB">Alberta</option>
+                      <option value="BC">Colombie-Britannique</option>
+                      <option value="PE">Île-du-Prince-Édouard</option>
+                      <option value="MB">Manitoba</option>
+                      <option value="NB">Nouveau-Brunswick</option>
+                      <option value="NS">Nouvelle-Écosse</option>
+                      <option value="ON">Ontario</option>
+                      <option value="QC">Québec</option>
+                      <option value="SK">Saskatchewan</option>
+                      <option value="NL">Terre-Neuve-et-Labrador</option>
+                      <option value="NU">Nunavut</option>
+                      <option value="NT">Territoires du Nord-Ouest</option>
+                      <option value="YT">Yukon</option>
+                    </select>
+                </div>
+          
+                <div class="input-group">
+                    <label for="date-livraison">Date de Livraison <span class="champs-obligatoire">*</span></label>
+                    <input type="date" id="date-livraison" name="date-livraison" required >
+                </div>
+            </section>
+
+           <!-- SECTION 3 : À propos de la commande -->
+          <section class="form-section invisible" data-page="3">
+              <h2>À Propos de votre Commande de Fleurs</h2>
+              <small>* Champs obligatoires</small>
+          
+              <div class="input-group">
+                <label>Occasion <span class="champs-obligatoire">*</span></label>
+                <div class="radio-container">
+                  <div class="radio-col">
+                    <div class="radio-item">
+                      <label for="occasion-anniversaire">Anniversaire</label>
+                      <input type="radio" id="occasion-anniversaire" name="occasion" value="anniversaire" required>
+                    </div>
+                    <div class="radio-item">
+                      <label for="occasion-je-taime">Je t'aime</label>
+                      <input type="radio" id="occasion-je-taime" name="occasion" value="je t'aime">
+                    </div>
+                    <div class="radio-item">
+                      <label for="occasion-fete-des-meres">Fête des mères</label>
+                      <input type="radio" id="occasion-fete-des-meres" name="occasion" value="fete des meres">
+                    </div>
+                    <div class="radio-item">
+                      <label for="occasion-deuil">Deuil</label>
+                      <input type="radio" id="occasion-deuil" name="occasion" value="deuil">
+                    </div>
+                  </div>
+                  <div class="radio-col">
+                    <div class="radio-item">
+                      <label for="occasion-nos-felicitations">Nos félicitations</label>
+                      <input type="radio" id="occasion-nos-felicitations" name="occasion" value="nos felicitations">
+                    </div>
+                    <div class="radio-item">
+                      <label for="occasion-guerissez-bientot">Guérissez bientôt</label>
+                      <input type="radio" id="occasion-guerissez-bientot" name="occasion" value="guerissez bientot">
+                    </div>
+                    <div class="radio-item">
+                      <label for="occasion-la-sympathie">La sympathie</label>
+                      <input type="radio" id="occasion-la-sympathie" name="occasion" value="la sympathie">
+                    </div>
+                    <div class="radio-item">
+                      <label for="occasion-autre">Autre</label>
+                      <input type="radio" id="occasion-autre" name="occasion" value="autre">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="input-group">
+                <label for="couleur-style">Couleur et Style des Fleurs <span class="champs-obligatoire">*</span></label>
+                <select id="couleur-style" name="couleur-style" required>
+                  <option value="">Afficher plus</option>
+                  <option value="Lumineux-et-Colore">Lumineux et Coloré </option>
+                  <option value="Rose-et-Blanc">Rose et Blanc</option>
+                  <option value="Raffine-et-elegant">Raffiné et élégant </option>
+                  <option value="Couleurs-Douces">Couleurs Douces</option>
+                  <option value="Native">Native</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label>Voulez-vous recevoir des notifications ?</label>
+                <div class="radio-container notifications">
+                    <label>
+                        <input type="radio" name="notifications" value="oui"> Oui
+                    </label>
+                    <label>
+                        <input type="radio" name="notifications" value="non" checked> Non
+                    </label>
+                </div>
+                <select id="mode-notification" name="mode-notification" disabled>
+                    <option value="">Sélectionnez un mode</option>
+                    <option value="Par-message-texte">Par message texte</option>
+                    <option value="Par-courriel">Par courriel</option>
+                    <option value="Par-application-mobile">Par application mobile</option>
+                </select>
+            </div>
+            
+              <div class="input-group">
+                <label for="message-personnel">Message Personnel</label>
+                <textarea id="message-personnel" name="message-personnel" placeholder="Tapez votre message ici..."rows="4"></textarea>
+              </div>
+          </section>
+          <!-- SECTION 4 (ou partie finale) : Résumé -->
+          <section class="form-section invisible" data-page="4">
+              <h2>Résumé de la Commande</h2>
+              <div class="resume">
+                <p><strong>Prénom de Client :</strong> <span data-champ="prenom-client"></span></p>
+                <p><strong>Nom de Client :</strong> <span data-champ="nom-client"></span></p>
+                <p><strong>Téléphone :</strong> <span data-champ="telephone-client"></span></p>
+                <p><strong>Email :</strong> <span data-champ="email-client"></span></p>
+                <hr>
+                <p><strong>Livré à :</strong> <span data-champ="prenom-recepteur"></span></p>
+                <p><strong>Téléphone Récepteur :</strong> <span data-champ="telephone-recepteur"></span></p>
+                <p><strong>Adresse Livraison :</strong> <span data-champ="adresse-livraison"></span></p>
+                <p><strong>Code postale :</strong> <span data-champ="code-postale"></span></p>
+                <p><strong>Province :</strong> <span data-champ="province"></span></p>
+                <p><strong>Date de Livraison :</strong> <span data-champ="date-livraison"></span></p>
+                <hr>
+                <p><strong>Occasion :</strong> <span data-champ="occasion"></span></p>
+                <p><strong>Style :</strong> <span data-champ="couleur-style"></span></p>
+                <p><strong>Notification :</strong> <span data-champ="mode-notification"></span></p>
+                <p><strong>Message :</strong> <span data-champ="message-personnel"></span></p>
+              </div>
+          </section>
+          <!-- BOUTONS DE NAVIGATION -->
+          <div class="form-navigation">
+            <div class="bouton-effacer" data-action="reset">Réinitialiser</div>
+            <div class="bouton reculer" data-direction="-1">Reculer</div>
+            <div class="bouton continuer inactif" data-direction="1">Continuer</div>
+            <!-- Le bouton de soumission sera visible seulement sur la dernière section, par exemple -->
+            <input class="bouton bouton-confirmer invisible" type="submit" id="btn-submit" value="Confirmer la commande">
+          </div>     
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Fleur de Bonheur. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
